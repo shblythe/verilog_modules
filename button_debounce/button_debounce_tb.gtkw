@@ -1,0 +1,27 @@
+[*]
+[*] GTKWave Analyzer v3.3.115 (w)1999-2023 BSI
+[*] Sun Apr 30 15:25:58 2023
+[*]
+[dumpfile] "/home/stephen/git/verilog/modules/button_debounce/button_debounce_tb.vcd"
+[dumpfile_mtime] "Sun Apr 30 15:24:38 2023"
+[dumpfile_size] 32674
+[savefile] "/home/stephen/git/verilog/modules/button_debounce/button_debounce_tb.gtkw"
+[timestart] 0
+[size] 1920 1080
+[pos] -1065 -56
+*-24.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] button_debounce_tb.
+[sst_width] 273
+[signals_width] 190
+[sst_expanded] 1
+[sst_vpaned_height] 324
+@28
+button_debounce_tb.button
+button_debounce_tb.clk
+button_debounce_tb.debounced_button
+button_debounce_tb.uut.but
+button_debounce_tb.uut.state
+@23
+button_debounce_tb.uut.debounce_count[21:0]
+[pattern_trace] 1
+[pattern_trace] 0

@@ -1,24 +1,25 @@
 [*]
 [*] GTKWave Analyzer v3.3.115 (w)1999-2023 BSI
-[*] Sat Apr 29 20:20:03 2023
+[*] Sat May  6 16:27:37 2023
 [*]
-[dumpfile] "/home/stephen/git/verilog/digikey_intro/div_testbench/clock_divider_tb.vcd"
-[dumpfile_mtime] "Sat Apr 29 20:18:19 2023"
-[dumpfile_size] 4013
-[savefile] "/home/stephen/git/verilog/digikey_intro/div_testbench/clock_divider_tb.gtkw"
+[dumpfile] "/home/stephen/git/led_sequencer/verilog_modules/clock_divider/clock_divider_tb.vcd"
+[dumpfile_mtime] "Sat May  6 16:26:58 2023"
+[dumpfile_size] 4003
+[savefile] "/home/stephen/git/led_sequencer/verilog_modules/clock_divider/clock_divider_tb.gtkw"
 [timestart] 0
-[size] 839 962
-[pos] -1 -1
+[size] 1368 768
+[pos] -762 -48
 *-18.788479 2291850 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] clock_divider_tb.
 [sst_width] 273
-[signals_width] 78
+[signals_width] 86
 [sst_expanded] 1
-[sst_vpaned_height] 283
+[sst_vpaned_height] 345
 @28
 clock_divider_tb.clk
 clock_divider_tb.out
-@29
 clock_divider_tb.rst
+@421
+clock_divider_tb.uut.DIVIDER
 [pattern_trace] 1
 [pattern_trace] 0

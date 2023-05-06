@@ -1,0 +1,22 @@
+[*]
+[*] GTKWave Analyzer v3.3.115 (w)1999-2023 BSI
+[*] Sat May  6 19:44:49 2023
+[*]
+[dumpfile] "/home/stephen/git/led_sequencer/verilog_modules/binary_decoder/binary_decoder_tb.vcd"
+[dumpfile_mtime] "Sat May  6 19:43:40 2023"
+[dumpfile_size] 1050
+[savefile] "/home/stephen/git/led_sequencer/verilog_modules/binary_decoder/binary_decoder_tb.gtkw"
+[timestart] 0
+[size] 1368 768
+[pos] -762 -48
+*-21.900000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 273
+[signals_width] 118
+[sst_expanded] 1
+[sst_vpaned_height] 215
+@29
+binary_decoder_tb.select[1:0]
+@22
+binary_decoder_tb.out[3:0]
+[pattern_trace] 1
+[pattern_trace] 0

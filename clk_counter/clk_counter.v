@@ -4,6 +4,7 @@
 `include "../clock_divider/clock_divider.v"
 
 module clk_counter #(
+        parameter COUNT_LIMIT       = 3,
         parameter COUNT_WIDTH       = 2,
         parameter CLOCK_DELAY       = 1000,
         parameter CLOCK_DELAY_WIDTH = 10
@@ -29,8 +30,12 @@ module clk_counter #(
     );
 
     always @ (posedge clkcnt or posedge rst) begin
-        if (rst == 1'b1)    count <= 'b0;
-        else                count <= count + 1'b1;
+        if (rst == 1'b1)
+            count <= 'b0;
+        else if (count == COUNT_LIMIT)
+            count <= 'b0;
+        else
+            count <= count + 1'b1;
     end
 
 endmodule

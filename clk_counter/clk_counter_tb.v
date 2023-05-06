@@ -25,6 +25,7 @@ module clk_counter_tb();
 
     // UUT
     clk_counter #(
+        .COUNT_LIMIT(9),
         .COUNT_WIDTH(COUNT_WIDTH),
         .CLOCK_DELAY(10),
         .CLOCK_DELAY(4)

@@ -1,0 +1,25 @@
+[*]
+[*] GTKWave Analyzer v3.3.115 (w)1999-2023 BSI
+[*] Sat May  6 20:15:05 2023
+[*]
+[dumpfile] "/home/stephen/git/led_sequencer/verilog_modules/led_mux/led_mux_tb.vcd"
+[dumpfile_mtime] "Sat May  6 20:14:15 2023"
+[dumpfile_size] 5821
+[savefile] "/home/stephen/git/led_sequencer/verilog_modules/led_mux/led_mux_tb.gtkw"
+[timestart] 0
+[size] 1368 768
+[pos] -762 -48
+*-21.299999 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 273
+[signals_width] 118
+[sst_expanded] 1
+[sst_vpaned_height] 215
+@28
+led_mux_tb.clk
+@22
+led_mux_tb.o_cols[7:0]
+led_mux_tb.o_rows[3:0]
+@28
+led_mux_tb.rst
+[pattern_trace] 1
+[pattern_trace] 0

@@ -1,0 +1,29 @@
+[*]
+[*] GTKWave Analyzer v3.3.115 (w)1999-2023 BSI
+[*] Sat May  6 16:29:25 2023
+[*]
+[dumpfile] "/home/stephen/git/led_sequencer/verilog_modules/clk_counter/clk_counter_tb.vcd"
+[dumpfile_mtime] "Sat May  6 16:28:13 2023"
+[dumpfile_size] 4786
+[savefile] "/home/stephen/git/led_sequencer/verilog_modules/clk_counter/clk_counter_tb.gtkw"
+[timestart] 0
+[size] 1368 768
+[pos] -762 -48
+*-20.700001 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] clk_counter_tb.
+[treeopen] clk_counter_tb.uut.
+[sst_width] 273
+[signals_width] 118
+[sst_expanded] 1
+[sst_vpaned_height] 262
+@28
+clk_counter_tb.clk
+clk_counter_tb.rst
+@420
+clk_counter_tb.uut.CLOCK_DELAY
+@28
+clk_counter_tb.uut.clkcnt
+@23
+clk_counter_tb.count[3:0]
+[pattern_trace] 1
+[pattern_trace] 0

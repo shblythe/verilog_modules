@@ -28,7 +28,9 @@ module led_mux_tb ();
         .NUM_ROWS_WIDTH(2),
         .NUM_COLS(NUM_COLS),
         .CLOCK_DELAY(10),
-        .CLOCK_DELAY_WIDTH(4)
+        .CLOCK_DELAY_WIDTH(4),
+        .ROW_OUTPUT_ACTIVE_LOW(1),
+        .COL_OUTPUT_ACTIVE_LOW(1)
     ) uut (
         .clk(clk),
         .i_rst(rst),

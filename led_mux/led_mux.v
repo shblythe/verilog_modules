@@ -6,11 +6,13 @@
 `include "../binary_decoder/binary_decoder.v"
 
 module led_mux #(
-        parameter NUM_ROWS          = 4,
-        parameter NUM_ROWS_WIDTH    = 2,
-        parameter NUM_COLS          = 8,
-        parameter CLOCK_DELAY       = 1000,
-        parameter CLOCK_DELAY_WIDTH = 10
+        parameter NUM_ROWS              = 4,
+        parameter NUM_ROWS_WIDTH        = 2,
+        parameter NUM_COLS              = 8,
+        parameter CLOCK_DELAY           = 1000,
+        parameter CLOCK_DELAY_WIDTH     = 10,
+        parameter ROW_OUTPUT_ACTIVE_LOW = 0,
+        parameter COL_OUTPUT_ACTIVE_LOW = 0
     )
     (
         // Inputs
@@ -26,6 +28,18 @@ module led_mux #(
     wire clkmux;
 
     reg [(NUM_ROWS_WIDTH-1):0] row;
+
+    // Deal with inversion of outputs if necessary
+    wire    [(NUM_COLS-1):0]    pre_cols;
+    wire    [(NUM_ROWS-1):0]    pre_rows;
+    if (COL_OUTPUT_ACTIVE_LOW)
+        assign o_cols = ~pre_cols;
+    else
+        assign o_cols = pre_cols;
+    if (ROW_OUTPUT_ACTIVE_LOW)
+        assign o_rows = ~pre_rows;
+    else
+        assign o_rows = pre_rows;
 
     clk_counter #(
         .CLOCK_DELAY_WIDTH(CLOCK_DELAY_WIDTH),
@@ -45,7 +59,7 @@ module led_mux #(
     ) cols_mux (
         .select(row),
         .inputs(i_rows),
-        .out(o_cols)
+        .out(pre_cols)
     );
 
     binary_decoder #(
@@ -53,7 +67,7 @@ module led_mux #(
         .OUTPUTS_WIDTH(NUM_ROWS_WIDTH)
     ) bin_dec (
         .select(row),
-        .out(o_rows)
+        .out(pre_rows)
     );
 
 endmodule

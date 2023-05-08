@@ -1,9 +1,9 @@
 `default_nettype none
 // Display an LED matrix multiplexed by row
 
-`include "../clk_counter/clk_counter.v"
-`include "../async_mux/async_mux.v"
-`include "../binary_decoder/binary_decoder.v"
+`include "verilog_modules/clk_counter/clk_counter.v"
+`include "verilog_modules/async_mux/async_mux.v"
+`include "verilog_modules/binary_decoder/binary_decoder.v"
 
 module led_mux #(
         parameter NUM_ROWS              = 4,

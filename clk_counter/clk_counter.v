@@ -1,7 +1,7 @@
 `default_nettype none
 // Automatic binary counter with divided clock
 
-`include "../clock_divider/clock_divider.v"
+`include "verilog_modules/clock_divider/clock_divider.v"
 
 module clk_counter #(
         parameter COUNT_LIMIT       = 3,

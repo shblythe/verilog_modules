@@ -1,0 +1,25 @@
+[*]
+[*] GTKWave Analyzer v3.3.115 (w)1999-2023 BSI
+[*] Tue May 16 06:38:41 2023
+[*]
+[dumpfile] "/home/stephen/git/verilog/digikey_intro/led_sequencer/verilog_modules/clk_pulse/clk_pulse_tb.vcd"
+[dumpfile_mtime] "Tue May 16 06:37:37 2023"
+[dumpfile_size] 8726
+[savefile] "/home/stephen/git/verilog/digikey_intro/led_sequencer/verilog_modules/clk_pulse/clk_pulse_tb.gtkw"
+[timestart] 0
+[size] 1920 1080
+[pos] -1065 -56
+*-21.600000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] clk_pulse_tb.
+[treeopen] clk_pulse_tb.uut.
+[sst_width] 273
+[signals_width] 78
+[sst_expanded] 1
+[sst_vpaned_height] 324
+@28
+clk_pulse_tb.clk
+clk_pulse_tb.uut.clkcnt.clkcnt
+@29
+clk_pulse_tb.pulse
+[pattern_trace] 1
+[pattern_trace] 0

@@ -28,7 +28,7 @@ module clk_counter_tb();
         .COUNT_LIMIT(9),
         .COUNT_WIDTH(COUNT_WIDTH),
         .CLOCK_DELAY(10),
-        .CLOCK_DELAY(4)
+        .CLOCK_DELAY_WIDTH(4)
     ) uut (
         .clk(clk),
         .rst(rst),

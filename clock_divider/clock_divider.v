@@ -1,3 +1,6 @@
+`ifndef __CLOCK_DIVIDER
+`define __CLOCK_DIVIDER
+
 module clock_divider #(
     // Parameters
     parameter   DIVIDER         = 12000000,
@@ -20,7 +23,7 @@ module clock_divider #(
     always @ (posedge clk or posedge rst) begin
         if (rst == 1'b1) begin
             count <= 0;
-            out <= 0;
+            out <= 1;
         end else if (count == DIVIDER/2 - 1) begin
             count <= 0;
             out <= ~out;
@@ -30,3 +33,4 @@ module clock_divider #(
     end
 endmodule
 
+`endif

@@ -12,7 +12,7 @@ module led_mux_tb ();
     wire    [(NUM_ROWS-1):0]   o_rows;
 
     // Storage elements (tied to UUT inputs)
-    reg     clk = 0;
+    reg     clk = 1;
     reg     rst = 0;
     reg     [(NUM_COLS-1):0]    i_rows  [0:(NUM_ROWS-1)];
 
@@ -30,7 +30,9 @@ module led_mux_tb ();
         .CLOCK_DELAY(10),
         .CLOCK_DELAY_WIDTH(4),
         .ROW_OUTPUT_ACTIVE_LOW(1),
-        .COL_OUTPUT_ACTIVE_LOW(1)
+        .COL_OUTPUT_ACTIVE_LOW(1),
+        .COL_PULSE_CLOCK_START(2),
+        .COL_PULSE_CLOCK_LIMIT(4)
     ) uut (
         .clk(clk),
         .i_rst(rst),

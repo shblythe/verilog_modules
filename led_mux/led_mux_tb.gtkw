@@ -1,19 +1,21 @@
 [*]
 [*] GTKWave Analyzer v3.3.115 (w)1999-2023 BSI
-[*] Sat May  6 20:15:05 2023
+[*] Tue May 16 06:53:51 2023
 [*]
-[dumpfile] "/home/stephen/git/led_sequencer/verilog_modules/led_mux/led_mux_tb.vcd"
-[dumpfile_mtime] "Sat May  6 20:14:15 2023"
-[dumpfile_size] 5821
-[savefile] "/home/stephen/git/led_sequencer/verilog_modules/led_mux/led_mux_tb.gtkw"
+[dumpfile] "/home/stephen/git/verilog/digikey_intro/led_sequencer/verilog_modules/led_mux/led_mux_tb.vcd"
+[dumpfile_mtime] "Tue May 16 06:52:45 2023"
+[dumpfile_size] 10054
+[savefile] "/home/stephen/git/verilog/digikey_intro/led_sequencer/verilog_modules/led_mux/led_mux_tb.gtkw"
 [timestart] 0
-[size] 1368 768
-[pos] -762 -48
-*-21.299999 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[size] 1920 1080
+[pos] -1065 -56
+*-20.699999 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] led_mux_tb.
+[treeopen] led_mux_tb.uut.
 [sst_width] 273
 [signals_width] 118
 [sst_expanded] 1
-[sst_vpaned_height] 215
+[sst_vpaned_height] 246
 @28
 led_mux_tb.clk
 @22
@@ -21,5 +23,7 @@ led_mux_tb.o_cols[7:0]
 led_mux_tb.o_rows[3:0]
 @28
 led_mux_tb.rst
+@29
+led_mux_tb.uut.cols_duty
 [pattern_trace] 1
 [pattern_trace] 0

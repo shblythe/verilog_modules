@@ -2,6 +2,7 @@
 // Display an LED matrix multiplexed by row
 
 `include "verilog_modules/clk_counter/clk_counter.v"
+`include "verilog_modules/clk_pulse/clk_pulse.v"
 `include "verilog_modules/async_mux/async_mux.v"
 `include "verilog_modules/binary_decoder/binary_decoder.v"
 
@@ -12,7 +13,9 @@ module led_mux #(
         parameter CLOCK_DELAY           = 1000,
         parameter CLOCK_DELAY_WIDTH     = 10,
         parameter ROW_OUTPUT_ACTIVE_LOW = 0,
-        parameter COL_OUTPUT_ACTIVE_LOW = 0
+        parameter COL_OUTPUT_ACTIVE_LOW = 0,
+        parameter COL_PULSE_CLOCK_START = 50,
+        parameter COL_PULSE_CLOCK_LIMIT = 100
     )
     (
         // Inputs
@@ -25,17 +28,16 @@ module led_mux #(
         output      [(NUM_ROWS-1):0]    o_rows
     );
 
-    wire clkmux;
-
     reg [(NUM_ROWS_WIDTH-1):0] row;
 
-    // Deal with inversion of outputs if necessary
+    // Deal with column duty-cycle, and inversion of outputs if necessary
     wire    [(NUM_COLS-1):0]    pre_cols;
     wire    [(NUM_ROWS-1):0]    pre_rows;
+    wire    reg cols_duty;
     if (COL_OUTPUT_ACTIVE_LOW)
-        assign o_cols = ~pre_cols;
+        assign o_cols = ~(pre_cols & (cols_duty ? -1 : 0));
     else
-        assign o_cols = pre_cols;
+        assign o_cols = (pre_cols & (cols_duty ? -1 : 0));
     if (ROW_OUTPUT_ACTIVE_LOW)
         assign o_rows = ~pre_rows;
     else
@@ -50,6 +52,19 @@ module led_mux #(
         .clk(clk),
         .rst(i_rst),
         .count(row)
+    );
+
+    clk_pulse #(
+        .COUNT_LIMIT(CLOCK_DELAY-1),
+        .COUNT_WIDTH(CLOCK_DELAY_WIDTH),
+        .PULSE_START(COL_PULSE_CLOCK_START),
+        .PULSE_LIMIT(COL_PULSE_CLOCK_LIMIT),
+        .CLOCK_DELAY(0),
+        .CLOCK_DELAY_WIDTH(1)
+    ) clkpulse (
+        .clk(clk),
+        .rst(i_rst),
+        .pulse(cols_duty)
     );
 
     async_mux #(

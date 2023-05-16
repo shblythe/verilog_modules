@@ -1,0 +1,24 @@
+[*]
+[*] GTKWave Analyzer v3.3.115 (w)1999-2023 BSI
+[*] Tue May 16 20:37:33 2023
+[*]
+[dumpfile] "/home/stephen/git/verilog/digikey_intro/led_sequencer/verilog_modules/reset/reset_tb.vcd"
+[dumpfile_mtime] "Tue May 16 20:36:32 2023"
+[dumpfile_size] 6162
+[savefile] "/home/stephen/git/verilog/digikey_intro/led_sequencer/verilog_modules/reset/reset_tb.gtkw"
+[timestart] 0
+[size] 839 962
+[pos] -1 -1
+*-21.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] reset_tb.
+[sst_width] 273
+[signals_width] 78
+[sst_expanded] 1
+[sst_vpaned_height] 283
+@28
+reset_tb.clk
+reset_tb.rst
+@29
+reset_tb.o_rst
+[pattern_trace] 1
+[pattern_trace] 0

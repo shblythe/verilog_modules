@@ -12,25 +12,28 @@ module clock_divider #(
     input       rst,
 
     // Outputs
-    output reg  out
+    output      out
     );
 
     // Internal signals
     reg div_clk;
     reg [DIV_WIDTH:0] count;
 
+    assign out = div_clk;
+
     // Clock divider
-    always @ (clk or posedge rst) begin
+    always @ (posedge clk or rst) begin
         if (rst == 1'b1) begin
             count <= 0;
-            out <= 1;
-        end else if (count == DIVIDER-1) begin
-            count <= 0;
-            out <= ~out;
+            div_clk <= 1;
         end else begin
             count <= count + 1;
+            if (count >= DIVIDER-1)
+                count <= 0;
+            div_clk <= (count < (DIVIDER/2))? 1'b1 : 1'b0;
         end
     end
+
 endmodule
 
 `endif

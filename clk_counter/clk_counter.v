@@ -1,5 +1,8 @@
 `default_nettype none
-// Automatic binary counter with divided clock
+// Automatic binary counter with optionally divided clock
+
+`ifndef __CLK_COUNTER
+`define __CLK_COUNTER
 
 `include "verilog_modules/clock_divider/clock_divider.v"
 
@@ -20,14 +23,20 @@ module clk_counter #(
 
     wire clkcnt;
 
-    clock_divider #(
-        .DIV_WIDTH(CLOCK_DELAY_WIDTH),
-        .DIVIDER(CLOCK_DELAY)
-    ) clkdiv (
-        .clk(clk),
-        .rst(rst),
-        .out(clkcnt)
-    );
+    generate
+        if (CLOCK_DELAY==0) begin
+            assign clkcnt = clk;
+        end else begin
+            clock_divider #(
+                .DIV_WIDTH(CLOCK_DELAY_WIDTH),
+                .DIVIDER(CLOCK_DELAY)
+            ) clkdiv (
+                .clk(clk),
+                .rst(rst),
+                .out(clkcnt)
+            );
+        end
+    endgenerate
 
     always @ (posedge clkcnt or posedge rst) begin
         if (rst == 1'b1)
@@ -40,4 +49,5 @@ module clk_counter #(
 
 endmodule
 
+`endif
 

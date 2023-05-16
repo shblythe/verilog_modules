@@ -29,7 +29,7 @@ module clock_divider_tb();
     end
 
     // Instantiate UUT
-    clock_divider #(.DIV_WIDTH(4), .DIVIDER(12)) uut (
+    clock_divider #(.DIV_WIDTH(4), .DIVIDER(9)) uut (
         .clk(clk),
         .rst(rst),
         .out(out)

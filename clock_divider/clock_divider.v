@@ -20,11 +20,11 @@ module clock_divider #(
     reg [DIV_WIDTH:0] count;
 
     // Clock divider
-    always @ (posedge clk or posedge rst) begin
+    always @ (clk or posedge rst) begin
         if (rst == 1'b1) begin
             count <= 0;
             out <= 1;
-        end else if (count == DIVIDER/2 - 1) begin
+        end else if (count == DIVIDER-1) begin
             count <= 0;
             out <= ~out;
         end else begin

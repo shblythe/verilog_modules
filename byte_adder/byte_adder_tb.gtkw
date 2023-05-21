@@ -1,0 +1,25 @@
+[*]
+[*] GTKWave Analyzer v3.3.115 (w)1999-2023 BSI
+[*] Sat May 20 08:51:59 2023
+[*]
+[dumpfile] "/home/stephen/git/verilog/verilog_modules/byte_adder/byte_adder_tb.vcd"
+[dumpfile_mtime] "Sat May 20 08:51:21 2023"
+[dumpfile_size] 1045
+[savefile] "/home/stephen/git/verilog/verilog_modules/byte_adder/byte_adder_tb.gtkw"
+[timestart] 0
+[size] 1920 1080
+[pos] -1065 -56
+*-20.100000 15 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] byte_adder_tb.
+[sst_width] 273
+[signals_width] 118
+[sst_expanded] 1
+[sst_vpaned_height] 371
+@22
+byte_adder_tb.input1[7:0]
+byte_adder_tb.input2[7:0]
+byte_adder_tb.res[7:0]
+@29
+byte_adder_tb.carry
+[pattern_trace] 1
+[pattern_trace] 0

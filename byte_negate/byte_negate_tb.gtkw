@@ -1,0 +1,23 @@
+[*]
+[*] GTKWave Analyzer v3.3.115 (w)1999-2023 BSI
+[*] Mon May 22 21:00:08 2023
+[*]
+[dumpfile] "/home/stephen/git/led_sequencer/verilog_modules/byte_negate/byte_negate_tb.vcd"
+[dumpfile_mtime] "Mon May 22 20:59:07 2023"
+[dumpfile_size] 708
+[savefile] "/home/stephen/git/led_sequencer/verilog_modules/byte_negate/byte_negate_tb.gtkw"
+[timestart] 0
+[size] 1368 768
+[pos] -762 -48
+*-21.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] byte_negate_tb.
+[sst_width] 273
+[signals_width] 94
+[sst_expanded] 1
+[sst_vpaned_height] 215
+@22
+byte_negate_tb.in[7:0]
+@23
+byte_negate_tb.res[7:0]
+[pattern_trace] 1
+[pattern_trace] 0

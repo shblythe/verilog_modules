@@ -1,0 +1,24 @@
+[*]
+[*] GTKWave Analyzer v3.3.115 (w)1999-2023 BSI
+[*] Tue May 23 21:34:02 2023
+[*]
+[dumpfile] "/home/stephen/git/led_sequencer/verilog_modules/delay_line/delay_line_tb.vcd"
+[dumpfile_mtime] "Tue May 23 21:32:33 2023"
+[dumpfile_size] 3388
+[savefile] "/home/stephen/git/led_sequencer/verilog_modules/delay_line/delay_line_tb.gtkw"
+[timestart] 0
+[size] 1368 768
+[pos] -762 -48
+*-20.100000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] delay_line_tb.
+[sst_width] 273
+[signals_width] 78
+[sst_expanded] 1
+[sst_vpaned_height] 262
+@28
+delay_line_tb.clk
+delay_line_tb.in
+@29
+delay_line_tb.res
+[pattern_trace] 1
+[pattern_trace] 0

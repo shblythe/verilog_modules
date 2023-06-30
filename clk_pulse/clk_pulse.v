@@ -8,8 +8,8 @@ module clk_pulse #(
         parameter COUNT_WIDTH       = 4,
         parameter PULSE_START       = 1,
         parameter PULSE_LIMIT       = 11,
-        parameter CLOCK_DELAY       = 1000,
-        parameter CLOCK_DELAY_WIDTH = 10
+        parameter CLOCK_DELAY       = 0,
+        parameter CLOCK_DELAY_WIDTH = 1
     )
     (
         // Inputs

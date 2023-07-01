@@ -17,7 +17,7 @@ $(PROJECT_NAME).json: *.v
 	iverilog -I../.. $(IVERILOG_OPTS) -o hardware.out *.v
 
 $(PROJECT_NAME)_tb.vcd: *.v
-	iverilog -I../.. $(IVERILOG_OPTS) -o $(PROJECT_NAME)_tb.out -D VCD_OUTPUT=$(PROJECT_NAME)_tb $(PROJECT_NAME)_tb.v $(PROJECT_NAME).v
+	iverilog -I../.. $(IVERILOG_OPTS) -o $(PROJECT_NAME)_tb.out -D VCD_OUTPUT=$(PROJECT_NAME)_tb *.v
 	vvp $(PROJECT_NAME)_tb.out
 
 	yosys -p 'synth_ice40 -top $(PROJECT_NAME) -json $(PROJECT_NAME).json' \

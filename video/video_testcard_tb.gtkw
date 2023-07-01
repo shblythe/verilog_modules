@@ -1,0 +1,26 @@
+[*]
+[*] GTKWave Analyzer v3.3.115 (w)1999-2023 BSI
+[*] Sat Jul  1 15:37:45 2023
+[*]
+[dumpfile] "/home/stephen/git/verilog/verilog_modules/video_testcard/video_testcard_tb.vcd"
+[dumpfile_mtime] "Sat Jul  1 15:37:26 2023"
+[dumpfile_size] 246502044
+[savefile] "/home/stephen/git/verilog/verilog_modules/video_testcard/video_testcard_tb.gtkw"
+[timestart] 0
+[size] 839 962
+[pos] -1 -1
+*-31.800001 81548190 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] video_testcard_tb.
+[treeopen] video_testcard_tb.uut.
+[sst_width] 273
+[signals_width] 182
+[sst_expanded] 1
+[sst_vpaned_height] 487
+@28
+[color] 1
+video_testcard_tb.o_sync
+video_testcard_tb.o_white
+video_testcard_tb.clk
+video_testcard_tb.rst
+[pattern_trace] 1
+[pattern_trace] 0

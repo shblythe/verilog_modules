@@ -11,7 +11,9 @@ module video_testcard_tb();
 
     // Storage elements (mapped to inputs)
     reg     clk = 0;
-    reg     rst = 0;
+    reg     i_rst = 0;
+
+    reg    rst;
 
     // Sim time
     localparam DURATION = 100000000;    // 100 ms
@@ -25,7 +27,7 @@ module video_testcard_tb();
     // UUT
     video_testcard uut (
         .clk(clk),
-        .i_rst_button(rst),
+        .rst(rst),
         .o_sync(o_sync),
         .o_white(o_white)
     );

@@ -1,19 +1,27 @@
 `default_nettype none
-// Composite video testcard
+// Raw composite video module
 
 `include "verilog_modules/clk_pulse/clk_pulse.v"
 `include "verilog_modules/clk_counter/clk_counter.v"
-`include "verilog_modules/reset/reset.v"
 
-module video_testcard
+module video_raw
     (
         // Inputs
-        input       clk,
-        input       i_rst_button,
+        input           clk,        // 12 MHz clock signal
+        input           rst,        // reset signal
+        input           i_pixel,    // pixel signal for the pixel at o_pixel_x,y
+                                    // ignored unless o_enable high
 
         // Outputs
-        output reg  o_sync,
-        output o_white
+        output reg      o_sync,     // to drive composite video:
+        output          o_white,    // sync white   voltage
+                                    //  0   0       0.0V    - sync
+                                    //  1   0       0.3V    - black
+                                    //  1   1       1.0V    - white
+                                    //  0   1       INVALID
+        output          o_enable,   // high when o_pixel_x,y are valid
+        output [8:0]    o_pixel_x,  // current x coordinate: 0-498
+        output [7:0]    o_pixel_y   // current y coordinate: 0-229
     );
 
     // Number of 12MHz clock cycles for some approx microsecond timings
@@ -34,37 +42,26 @@ module video_testcard
     localparam SCANLINE_LAST_TEXT = 280;
     localparam SCANLINE_LAST_DISPLAY = 308;
 
-    wire rst;
     wire broad_sync;
     wire short_sync;
     wire hsync;
 
     wire [9:0] half_scan_line;
     wire [8:0] scan_line;
-    wire [7:0] pixel_y;
     wire [9:0] raw_pixel_x;
-    wire [8:0] pixel_x;
 
     assign scan_line[8:0] = half_scan_line[9:1];
 
-    wire textsafe;
     wire textsafe_x;
     wire textsafe_y;
 
     assign textsafe_y = (scan_line >= SCANLINE_FIRST_TEXT && scan_line <= SCANLINE_LAST_TEXT);
 
-    assign pixel_y = textsafe_y ? scan_line-SCANLINE_FIRST_TEXT : 0;
-    assign pixel_x = textsafe_x ? raw_pixel_x-FULL_X_LEFT_BORDER+1 : 0;
+    assign o_pixel_y = textsafe_y ? scan_line-SCANLINE_FIRST_TEXT : 0;
+    assign o_pixel_x = textsafe_x ? raw_pixel_x-FULL_X_LEFT_BORDER+1 : 0;
 
-    assign textsafe = textsafe_y & textsafe_x;
-
-    assign o_white = (textsafe == 0) ? 0 : ((pixel_y & 7) == 0 || (pixel_x & 7) == 0 ? 1 : 0);
-
-    reset reset (
-        .clk(clk),
-        .i_rst_button(i_rst_button),
-        .o_rst(rst)
-    );
+    assign o_enable = textsafe_y & textsafe_x;
+    assign o_white = o_enable ? i_pixel : 0;
 
     clk_pulse #(
         .COUNT_LIMIT(HALFSCANLINE_32-1),

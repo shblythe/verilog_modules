@@ -1,0 +1,24 @@
+[*]
+[*] GTKWave Analyzer v3.3.115 (w)1999-2023 BSI
+[*] Sun Jul  2 18:12:55 2023
+[*]
+[dumpfile] "/home/stephen/git/verilog/verilog_modules/raster_font/raster_font_tb.vcd"
+[dumpfile_mtime] "Sun Jul  2 18:11:51 2023"
+[dumpfile_size] 8480
+[savefile] "/home/stephen/git/verilog/verilog_modules/raster_font/raster_font_tb.gtkw"
+[timestart] 0
+[size] 1920 1080
+[pos] -1065 -56
+*-16.799999 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] raster_font_tb.
+[sst_width] 273
+[signals_width] 118
+[sst_expanded] 1
+[sst_vpaned_height] 425
+@22
+raster_font_tb.char[5:0]
+raster_font_tb.row[3:0]
+@29
+raster_font_tb.raster[5:0]
+[pattern_trace] 1
+[pattern_trace] 0

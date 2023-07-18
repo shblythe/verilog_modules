@@ -122,6 +122,9 @@ module video_raw
     // Assuming 16:9, that would mean ~409 pixels in the x direction
     // Our text area is 499 12MHz clock cycles wide, so that won't be square,
     // but let's go with it for now
+    // Assuming 4:3, that would be 307 pixels in the x direction, which we're
+    // not going to be able to do with a 12MHz clock - need a faster clock
+    // that we can divide down to do this - could try with PLL at some point.
     clk_counter #(
         .CLOCK_DELAY(0),
         .COUNT_LIMIT(SCANLINE_64-1),

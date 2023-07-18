@@ -12,7 +12,7 @@ gui: $(PROJECT_NAME).json $(PROJECT_NAME).pcf
 		--pcf $(PROJECT_NAME).pcf --gui
 
 $(PROJECT_NAME).json: *.v
-	iverilog $(IVERILOG_OPTS) -o hardware.out *.v
+	iverilog $(IVERILOG_OPTS) -o hardware.out *.v $(IVERILOG_FILES)
 	yosys -p "plugin -i systemverilog" -p "read_systemverilog $(PROJECT_NAME).v" \
 		-p 'synth_ice40 -top $(PROJECT_NAME) -json $(PROJECT_NAME).json'
 

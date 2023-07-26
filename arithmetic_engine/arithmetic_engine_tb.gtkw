@@ -1,0 +1,25 @@
+[*]
+[*] GTKWave Analyzer v3.3.115 (w)1999-2023 BSI
+[*] Wed Jul 26 20:04:22 2023
+[*]
+[dumpfile] "/home/stephen/git/led_sequencer/verilog_modules/arithmetic_engine/arithmetic_engine_tb.vcd"
+[dumpfile_mtime] "Wed Jul 26 19:54:52 2023"
+[dumpfile_size] 1527
+[savefile] "/home/stephen/git/led_sequencer/verilog_modules/arithmetic_engine/arithmetic_engine_tb.gtkw"
+[timestart] 2223000
+[size] 1368 768
+[pos] -762 -48
+*-20.700001 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] arithmetic_engine_tb.
+[sst_width] 273
+[signals_width] 158
+[sst_expanded] 1
+[sst_vpaned_height] 262
+@22
+arithmetic_engine_tb.input1[7:0]
+arithmetic_engine_tb.input2[7:0]
+arithmetic_engine_tb.res[7:0]
+@29
+arithmetic_engine_tb.instruction[2:0]
+[pattern_trace] 1
+[pattern_trace] 0

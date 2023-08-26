@@ -1,0 +1,32 @@
+[*]
+[*] GTKWave Analyzer v3.3.115 (w)1999-2023 BSI
+[*] Sat Aug 26 16:04:40 2023
+[*]
+[dumpfile] "/home/stephen/git/led_sequencer/verilog_modules/register_block/register_block_tb.vcd"
+[dumpfile_mtime] "Sat Aug 26 16:03:58 2023"
+[dumpfile_size] 3851
+[savefile] "/home/stephen/git/led_sequencer/verilog_modules/register_block/register_block_tb.gtkw"
+[timestart] 0
+[size] 1338 658
+[pos] -749 -1
+*-17.400000 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] register_block_tb.
+[sst_width] 273
+[signals_width] 238
+[sst_expanded] 1
+[sst_vpaned_height] 262
+@28
+register_block_tb.clk
+register_block_tb.rst
+register_block_tb.dst[2:0]
+register_block_tb.w_en
+@22
+register_block_tb.input_bus[7:0]
+register_block_tb.r1[7:0]
+register_block_tb.r2[7:0]
+@28
+register_block_tb.r_en
+@23
+register_block_tb.output_bus[7:0]
+[pattern_trace] 1
+[pattern_trace] 0
